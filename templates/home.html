@@ -1,0 +1,40 @@
+{% extends 'index.html' %}
+
+{% block navbar %}
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ">
+      <li class="nav-item">
+        <a style="color: white;" class="nav-link active" href="{{url_for('home')}}">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a style="color: white;" class="nav-link" href="{{url_for('algorithm')}}"> Algorithm</a>
+      </li>
+      <li class="nav-item">
+        <a style="color: white;" class="nav-link" href="{{url_for('prediction')}}"> Prediction</a>
+      </li>
+      <li class="nav-item">
+        <a style="color: white;" class="nav-link" href="{{url_for('graph')}}"> Graph</a>
+      </li>
+      <li class="nav-item">
+        <a style="color: white;" class="nav-link" href="{{url_for('index')}}">Logout</a>
+      </li>
+    </ul>
+  </div>
+{% endblock %}
+
+{% block content %}
+
+  <center>
+    <section style="margin-top: 90px; padding: 30px;" class="slider_section ">
+      <div class="detail-box">
+        <h1 style="color: white;">
+          Energy Consumption Prediction!
+        </h1>
+        <p style="color: white;">
+          Energy consumption prediction is crucial for smart grids, energy management, and sustainability. This study applies LSTM, RNN, Linear Regression, GRU, and stacked LSTM to forecast electricity usage based on features like temperature, pressure, and wind speed. Data preprocessing, hyperparameter tuning, and model evaluation using MAE, RMSE, and R-squared ensure accuracy. Performance analysis compares prediction accuracy and computational efficiency across models. The findings aid resource allocation, demand forecasting, and optimizing energy usage for sustainability.
+        </p>
+      </div>
+    </section>
+  </center>
+
+{% endblock %}

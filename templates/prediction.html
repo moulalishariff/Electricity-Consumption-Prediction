@@ -1,0 +1,85 @@
+
+{% extends 'home.html' %}
+
+
+{% block content %}
+
+<section style="margin-top: -20px;" class="contact_section layout_padding">
+    <div class="container">
+        {% if prediction_text %}
+        <center>
+            <h2 style="color: black;">{{ prediction_text }}</h2>
+        </center>
+        {% endif %}
+
+        <div class="row">
+            <div style="margin-left: 300px; margin-top: 20px;" class="col-md-6">
+                <form action="{{ url_for('prediction') }}" method="post">
+
+                    <div>
+                        <center>
+                            <input style="border-radius: 5px; color: black;" type="number" step="0.01" name="temperature" placeholder="Enter Temperature" required/>
+                        </center>
+                    </div>
+
+                    <div>
+                        <center>
+                            <input style="border-radius: 5px; color: black;" type="number" step="0.01" name="humidity" placeholder="Enter Humidity" required/>
+                        </center>
+                    </div>
+
+                    <div>
+                        <center>
+                            <input style="border-radius: 5px; color: black;" type="number" step="0.01" name="wind_speed" placeholder="Enter Wind Speed" required/>
+                        </center>
+                    </div>
+
+                    <div>
+                        <center>
+                            <input style="border-radius: 5px; color: black;" type="number" step="0.01" name="solar_radiation" placeholder="Enter Solar Radiation" required/>
+                        </center>
+                    </div>
+
+                    <div>
+                        <center>
+                            <input style="border-radius: 5px; color: black;" type="number" step="0.01" name="time_of_day" placeholder="Enter Time of Day" required/>
+                        </center>
+                    </div>
+
+                    <div>
+                        <center>
+                            <input style="border-radius: 5px; color: black;" type="number" step="0.01" name="day_of_week" placeholder="Enter Day of Week" required/>
+                        </center>
+                    </div>
+
+                    <div>
+                        <center>
+                            <input style="border-radius: 5px; color: black;" type="number" step="0.01" name="energy_consumption" placeholder="Enter Energy Consumption" required/>
+                        </center>
+                    </div>
+
+                    <div>
+                        <center>
+                            <input style="border-radius: 5px; color: black;" type="number" step="0.01" name="peak_hour_indicator" placeholder="Enter Peak Hour Indicator" required/>
+                        </center>
+                    </div>
+
+                    <div>
+                        <center>
+                            <input style="border-radius: 5px; color: black;" type="number" step="0.01" name="power_price" placeholder="Enter Power Price" required/>
+                        </center>
+                    </div>
+
+                    <div class="d-flex">
+                        <center>
+                            <button style="margin-left: 180px; border-radius: 5px;" type="submit">
+                                Predict!
+                            </button>
+                        </center>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
